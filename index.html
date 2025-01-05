@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manojkumar's Portfolio</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm Manojkumar</h1>
+                <p>Entry-level Web Developer | Crafting Impactful Web Applications</p>
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+            <div class="hero-photo">
+                <img src="./Photo/Manojkumar B Photo.jpg" alt="Manojkumar" class="photo">
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I'm Manojkumar, a passionate web developer with expertise in ReactJS, Python, Django and SQL. 
+                I love creating intuitive and scalable web applications that make an impact. Currently, I'm honing my skills while preparing for job interviews and building new projects.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Backend:</strong> Python, Django</li>
+                <li><strong>Frontend:</strong> ReactJS, HTML, CSS, JavaScript</li>
+                <li><strong>Database:</strong> SQL</li>
+                <li><strong>Tools:</strong> VS Code </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+              <!-- Highlight GitHub Link -->
+                <div class="github-highlight">
+                    <h3>🌟 Explore More Projects</h3>
+                    <p>All my project codes are available on my GitHub. Click the button below to check out detailed repositories, documentation, and more!</p>
+                    <a href="https://github.com/manojkumarbalamurugan16" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> Visit My GitHub
+                    </a>
+                </div>
+
+            <div class="project">
+                <h3>Frontend Clone</h3>
+                
+                <p>A blogging platform built with Django, featuring CRUD operations and user authentication.</p>
+                <p>Hereby i shown the Output video of my projects</p>
+                <a href="Videos/Spotify output.mp4" class="btn-primary">Spotify clone</a>
+                <a href="Videos/Airbnb Output.mp4" class="btn-primary">Airbnb clone</a>
+                <a href="Videos/Tinder Output.mp4" class="btn-primary">Tinder clone</a>
+                <a href="Videos/Spotify-login - Personal - Microsoft​ Edge 2023-09-22 20-46-50.mp4" class="btn-primary">Spotify login clone</a>
+                
+            </div>
+            <div class="project">
+                <h3>Blog App</h3>
+                <p>A blogging platform built with Django, featuring CRUD operations and user authentication.</p>
+                <a href="./Videos/Blog app Output.mp4" class="btn-primary">View Project</a>
+                
+            </div>
+            
+            <div class="project">
+                <h3>EMATIX Company Website</h3>
+                <p>Designed and hosted a website with integrated forms and WhatsApp features.</p>
+                <a href="https://www.ematixsolutions.com" class="btn-primary">View Live Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience-item">
+                <h3>Web Developer Intern</h3>
+                <p><strong>EMATIX Embedded & Software Solutions</strong></p>
+                <ul>
+                    <li>Developed and hosted the company's website on Hostinger.</li>
+                    <li>Integrated features like forms and WhatsApp for seamless communication.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>I'd love to hear from you! Feel free to reach out via email or LinkedIn.</p>
+            <ul>
+                <li>Email: <a href="mailto:brmanoj16@gmail.com">brmanoj16@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/manojkumar-b-315197224">linkedin.com/in/manojkumar</a></li>
+                <li>GitHub: <a href="https://github.com/manojkumarbalamurugan16">github.com/manojkumarbalamurugan16</a></li>
+            </ul>
+            <form
+            action="https://api.whatsapp.com/send"
+            method="GET"
+            target="_blank"
+            onsubmit="return handleFormSubmission()"
+        >
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <input type="hidden" id="phone" name="phone" value="YOUR_PHONE_NUMBER" />
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+        
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Manojkumar | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        function handleFormSubmission() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const phone = "919080326730"; // Replace with your WhatsApp phone number (with country code, e.g., 919876543210)
+    
+            const text = `Hello, I am ${name}. My email is ${email}. Here is my message: ${message}`;
+    
+            const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
+    
+            window.open(url, "_blank");
+            return false; // Prevent default form submission
+        }
+    </script>
+    
+</body>
+</html>
