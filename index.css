@@ -91,69 +91,153 @@ body {
     background: #f9f9f9;
 }
 .skills h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #005a5c;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 1.5rem;
 }
-.skills ul {
+.skills  ul {
     list-style: none;
-    text-align: center;
+    
+    /* text-align: center; */
 }
 .skills li {
     font-size: 1.1rem;
     margin: 0.5rem 0;
 }
+.skillscontainer{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
 
 /* Projects Section */
 .projects {
-    padding: 2rem 0;
-    background: white;
+    padding: 50px 15px;
+    
 }
 .projects h2 {
-    font-size: 2rem;
-    color: #00c4cc;
     text-align: center;
-    margin-bottom: 1.5rem;
-}
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.5rem;
-}
-.project {
-    background: #f9f9f9;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-}
-.project h3 {
-    color: #005a5c;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-.project p {
-    color: #555;
-    margin-bottom: 1rem;
-}
-.project a {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    background: #00c4cc;
-    transition: background 0.3s ease;
-}
-.project a:hover {
-    background: #005a5c;
+    font-size: 2.5rem;
+    color:#005656;
+    margin-bottom: 40px;
 }
 
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background:#037f7f;
+    /* max-width: 500px; */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-content {
+    max-width: 100%;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    color: #dde2e8;
+    margin-bottom: 10px;
+}
+
+.project-content h3 a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.project-content h3 a:hover {
+    color: #03cd79;
+}
+
+.project-content p {
+    margin-bottom: 15px;
+    color: rgb(236, 226, 215);
+    line-height: 1.6;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    background: #03cd79;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.project-image {
+    max-width: 25%;
+    flex: 1;
+    margin-top: 1rem;
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Mobile Styles for Projects Section */
+@media screen and (max-width: 768px) {
+    .projects h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack projects vertically on small screens */
+        gap: 20px;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    .project h3 {
+        font-size: 1.3rem;
+    }
+
+    .project p {
+        font-size: 0.9rem;
+    }
+
+    .project-links a {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+    .project-image img{
+        height: 100px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-links a {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+}
 /* Experience Section */
 .experience {
     padding: 2rem 0;
@@ -180,42 +264,6 @@ body {
     font-size: 1rem;
     margin: 0.5rem 0;
     color: #555;
-}
-
-/* Contact Section */
-.contact {
-    padding: 2rem 0;
-    background: white;
-    text-align: center;
-}
-.contact h2 {
-    font-size: 2rem;
-    color: #00c4cc;
-    margin-bottom: 1rem;
-}
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-.contact input, .contact textarea {
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.contact button {
-    background: #005a5c;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-   
-}
-.contact button:hover {
-    background: #00383a;
 }
 
 /* Footer */
@@ -370,13 +418,7 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #00c4cc;
-    color: white;
-}
+
 /* Loading Overlay */
 .loading-overlay {
     position: fixed;
@@ -490,5 +532,129 @@ section {
 
     .nav-links a {
         text-align: center;
+    }
+}
+.contact {
+    padding: 50px 0;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.business-card {
+    background: linear-gradient(135deg, #00c4cc, #005f73);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.card-header h2 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
+    color:beige;
+}
+
+.card-header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.card-body p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.business-card a {
+    color: beige;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.business-card a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    .business-card {
+        padding: 15px; /* Reduced padding for smaller screens */
+        max-width: 90%; /* Allow the card to take up more space */
+    }
+
+    .card-header h2 {
+        font-size: 1.6em; /* Reduced font size for mobile */
+    }
+
+    .card-header p {
+        font-size: 1em; /* Adjust paragraph font size */
+    }
+
+    .card-body p {
+        font-size: 1em; /* Adjust body paragraph font size */
+    }
+
+    .business-card a {
+        font-size: 1em; /* Adjust the link font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .business-card {
+        padding: 10px; /* Even more reduced padding for very small screens */
+        max-width: 90%; /* Keep the card responsive */
+    }
+
+    .card-header h2 {
+        font-size: 1.4em; /* Smaller font size for very small screens */
+    }
+
+    .card-header p {
+        font-size: 0.9em; /* Smaller font size */
+    }
+
+    .card-body p {
+        font-size: 0.9em; /* Smaller body text */
+    }
+
+    .business-card a {
+        font-size: 0.9em; /* Smaller link size */
+    }
+}
+
+
+/* Animations */
+/* @keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+} */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

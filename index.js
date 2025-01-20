@@ -44,3 +44,4 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         hamburger.classList.remove('open');
     });
 });
+
