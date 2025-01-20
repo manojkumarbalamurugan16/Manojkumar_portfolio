@@ -52,7 +52,7 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     text-decoration: none;
-    transition: background 0.3s ease;
+    /* transition: background 0.3s ease; */
 }
 .btn-primary {
     background: #005a5c;
@@ -84,6 +84,22 @@ body {
     font-size: 1.1rem;
     color: #555;
 }
+.btn-primary1 {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #004ecc;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary1:hover {
+    background-color: #008a91;
+}
+
 
 /* Skills Section */
 .skills {
@@ -547,7 +563,7 @@ section {
 
 
 .business-card {
-    background: linear-gradient(135deg, #00c4cc, #005f73);
+    background: radial-gradient(#039398, #005f73);
     color: #fff;
     padding: 20px;
     border-radius: 15px;
@@ -559,12 +575,12 @@ section {
 }
 
 .card-header h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
     font-weight: bold;
     text-transform: uppercase;
     animation: fadeIn 1s ease-in-out;
-    color:beige;
+    color:#ffcc00;
 }
 
 .card-header p {
@@ -581,7 +597,7 @@ section {
 }
 
 .business-card a {
-    color: beige;
+    color: #ffcc00;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
