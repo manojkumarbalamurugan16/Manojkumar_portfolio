@@ -45,3 +45,24 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projectImages = document.querySelectorAll(".project-image");
+
+    projectImages.forEach(image => {
+        image.addEventListener("click", function () {
+            // Remove 'active' class from all images
+            projectImages.forEach(img => img.classList.remove("active"));
+
+            // Toggle 'active' class for the clicked image
+            this.classList.add("active");
+        });
+
+        // Close overlay when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!image.contains(e.target)) {
+                image.classList.remove("active");
+            }
+        });
+    });
+});
