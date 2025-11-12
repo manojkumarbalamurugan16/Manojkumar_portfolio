@@ -1,3 +1,56 @@
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Intersection Observer for section animations
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe all sections
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+// Mobile menu toggle
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+
+// Add loading animation
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loading-overlay');
+    loader.style.opacity = '0';
+    setTimeout(() => {
+        loader.style.display = 'none';
+    }, 500);
+});
+
 // Smooth Scrolling for Links
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -17,23 +70,8 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Animation on Scroll
 const animatedElements = document.querySelectorAll('.animated');
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.1 });
 
 animatedElements.forEach(element => observer.observe(element));
-
-function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-    const hamburger = document.querySelector('.hamburger');
-    hamburger.classList.toggle('open');
-}
 
 // Close the menu when a link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {

@@ -17,6 +17,31 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+/* Header / hero styles are defined later in the file to avoid duplicate/conflicting rules. */
+
+/* Initialize AOS */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add smooth transitions to all sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 /* Header Section */
 .hero {

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/2c938527a7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -35,14 +37,15 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container hero-content">
-            <div class="hero-text">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
                 <h1 class="animated fadeIn">Hi, I'm <span class="highlight">Manojkumar</span></h1>
                 <p class="animated slideIn">Entry-level Web Developer | Crafting Impactful Web Applications</p>
                 <div class="btn-group">
                     <a href="#projects" class="btn-primary animated fadeInUp">View My Work</a>
                     <a href="#contact" class="btn-secondary animated fadeInUp">Contact Me</a>
-                </div>
             </div>
+        </div>
+           
         </div>
     </header>
 
@@ -54,7 +57,7 @@
                 I'm Manojkumar, a passionate web developer with expertise in ReactJS, Python, Django, and SQL. 
                 I love creating intuitive and scalable web applications that make an impact. Currently, I'm honing my skills while preparing for job interviews and building new projects.
             </p>
-            <a href="./Manojkumar web Resume.pdf" download="Manojkumar.B Resume.pdf" class="btn-primary1">Download Resume</a>
+            <a href="./Manojkumar Resume.pdf" download="Manojkumar Resume.pdf" class="btn-primary1">Download Resume</a>
         </div>
     </section>
     
@@ -78,6 +81,34 @@
 <section id="projects" class="projects">
     <div class="container">
         <h2 class="animated fadeIn">Projects</h2>
+
+        <div class="project-card">
+            <div class="project-content">
+                <h3>Fusioncraft Tech Website</h3>
+                <p>
+                    Developed the website for FusionCraft Tech, showcasing the company’s digital services and portfolio. 
+            The site features a modern, responsive design with optimized performance, SEO integration, and a smooth user experience.
+                </p>
+                <div class="tags">
+                    <span>HTML&CSS</span>
+                    <span>JavaScript</span>
+                    <span>ReactJS</span>
+                    <span>Backend</span>
+                    <span>API Integration</span>
+                    <span>Hosting</span>
+                </div>
+                <div class="project-image">
+                    <a href="https://fusioncrafttech.vercel.app/" target="_blank">
+                        <img src="/Output/FCT.png" alt="Fusioncrafttech Website">
+                        <div class="overlay">
+                            <span class="visit-text">Visit Site</span>  
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
 
         <div class="project-card">
             <div class="project-content">
@@ -105,7 +136,29 @@
             </div>
         </div>
 
-        
+        <div class="project-card">
+            <div class="project-content">
+                <h3>Blog App </h3>
+                <p>
+                    A dynamic blog application built with Django. This project includes features such as user authentication, CRUD operations for posts, and a clean, user-friendly UI to enhance the blogging experience.
+                </p>
+                <div class="tags">
+                    <span>Django</span>
+                    <span>Python</span>
+                    <span>CRUD</span>
+                </div>
+                <div class="project-image">
+                    <a href="./Videos/Blog app Output.mp4" target="_blank">
+                        <img src="./Output/Blog app.png" alt="Blog App">
+                        <div class="overlay">
+                            <span class="visit-text">Visit Site</span>  
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
 
 
         <div class="project-card">
@@ -143,7 +196,7 @@
                     <span>JavaScript</span>
                 </div>
                 <div class="project-image">
-                    <a href="https://airbnb-clone-xi-jet.vercel.app/" target="_blank">
+                    <a href="https://manojkumarbalamurugan16.github.io/Airbnb-clone/" target="_blank">
                         <img src="./Output/Airbnbclone.png" alt="Airbnb Clone">
                         <div class="overlay">
                             <span class="visit-text">Visit Site</span>  
@@ -165,7 +218,7 @@
                     <span>JavaScript</span>
                 </div>
                 <div class="project-image">
-                    <a href="https://tinder-clone-rose.vercel.app/" target="_blank"></a>
+                    <a href="https://manojkumarbalamurugan16.github.io/Tinderclone/" target="_blank"></a>
                     <img src="./Output/Tinderclone.png" alt="Tinder Clone">
                     <div class="overlay">
                         <span class="visit-text">Visit Site</span>  
@@ -190,7 +243,7 @@
                     
                 </div>
                 <div class="project-image">
-                    <a href="https://tj-cafe-lfix.vercel.app/" target="_blank">
+                    <a href="https://manojkumarbalamurugan16.github.io/TJ_cafe/" target="_blank">
                     <img src="./Output/TJcafe.png" alt="TJ_cafe ">
                     <div class="overlay">
                         <span class="visit-text">Visit Site</span>  
@@ -204,33 +257,9 @@
 
         <div class="project-card">
             <div class="project-content">
-                <h3>Blog App </h3>
-                <p>
-                    A dynamic blog application built with Django. This project includes features such as user authentication, CRUD operations for posts, and a clean, user-friendly UI to enhance the blogging experience.
-                </p>
-                <div class="tags">
-                    <span>Django</span>
-                    <span>Python</span>
-                    <span>CRUD</span>
-                </div>
-                <div class="project-image">
-                    <a href="./Videos/Blog app Output.mp4" target="_blank">
-                        <img src="./Output/Blog app.png" alt="Blog App">
-                        <div class="overlay">
-                            <span class="visit-text">Visit Site</span>  
-                            <i class="fa-solid fa-up-right-from-square"></i>
-                        </div>
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-content">
                 <h3>Spotify Login UI</h3>
                 <p>
-                    This project is a pixel-perfect replica of Spotify’s login page, crafted exclusively using HTML and CSS. It highlights my ability to create sleek, responsive designs that emulate real-world user interfaces.
+                    This project is a pixel-perfect replica of Spotify's login page, crafted exclusively using HTML and CSS. It highlights my ability to create sleek, responsive designs that emulate real-world user interfaces.
 
                 </p>
                 <div class="tags">
@@ -239,7 +268,7 @@
                     
                 </div>
                 <div class="project-image">
-                    <a href="https://spotify-login-psi.vercel.app/" target="_blank">
+                    <a href="https://manojkumarbalamurugan16.github.io/Spotify-login/" target="_blank">
                     <img src="./Output/Spotifylogin.png" alt="Spotifylogin">
                     <div class="overlay">
                         <span class="visit-text">Visit Site</span>  
@@ -248,11 +277,7 @@
                     </a>
                 </div>
             </div>
-        </div>
-        
-        
-
-        
+        </div>       
     </div>
 </section>
 
@@ -317,4 +342,3 @@
     
 </body>
 </html>
-
